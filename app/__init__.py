@@ -16,7 +16,11 @@ def create_app(env):
     sentry.init_app(app)
     redis_store.init_app(app)
 
-    from .weixin import wx as wx_blueprint
-    app.register_blueprint(wx_blueprint)
+    # api v1 蓝本
+    from .api_v1 import api_v1 as api_v1_bp
+    app.register_blueprint(api_v1_bp)
+    
+    # from .weixin import wx as wx_blueprint
+    # app.register_blueprint(wx_blueprint)
 
     return app
