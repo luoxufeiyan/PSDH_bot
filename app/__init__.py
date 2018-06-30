@@ -20,7 +20,5 @@ def create_app(env):
     from .api_v1 import api_v1 as api_v1_bp
     app.register_blueprint(api_v1_bp)
     
-    # from .weixin import wx as wx_blueprint
-    # app.register_blueprint(wx_blueprint)
 
     return app
