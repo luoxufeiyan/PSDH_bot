@@ -5,6 +5,7 @@
 
 1. 随机3-5个bid提交
 2. 随机挂起2-10分钟休息
+3. 维护BID的有效性
 """
 import requests
 import time
